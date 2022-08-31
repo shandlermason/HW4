@@ -13,3 +13,6 @@ This program adds 1 to the given number
 3. <a href="https://github.com/kironjayesh" target="_blank">Kiron Jayesh</a>
 4. <a href="https://github.com/Darkviper7" target="_blank">Teja</a>
 5. <a href="https://github.com/Arun152k" target="_blank">Arun Kumar</a>
+
+## Resources:
+1. <a href="https://docs.pytest.org/en/7.1.x/" target="_blank">Pytest</a>
