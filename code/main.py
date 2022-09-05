@@ -1,5 +1,22 @@
+from distutils import ccompiler
+
+
 def func(x):
     return x + 1
+
+class Sym:
+    def __init__(self, c = 0, s = ""):
+        self.n = 0
+        self.at = c
+        self.name = s
+        self._has = []
+        
+    
+    def add(v):
+        if (v != "?"):
+            self.n = self.n + 1
+            self._has[v] = 1 + (self._has[v]) #v or 0
+
 
 
 class Num:
@@ -27,3 +44,7 @@ class Num:
 
     def mid(self):
         return self.x  # median - sort numbers seen so far, return the middle value
+
+class sym:
+
+    def __init__(self, c = 0, s = " ")
