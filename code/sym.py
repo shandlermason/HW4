@@ -1,3 +1,4 @@
+
 def mid(self,col,most,mode):
     most=-1
     for k,v in self._has.items():
