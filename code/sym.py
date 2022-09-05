@@ -1,3 +1,17 @@
+class Sym:
+    def __init__(self, c, s):
+        self.n = 0
+        self.at = c or True
+        self.name = s or True
+        self._has = dict()
+        
+    
+    def add(v):
+        if (v != "?"):
+            self.n = self.n + 1
+            if v in self._has:
+                self._has[v] = 1 + self._has[v]
+            else: self._has[v] = 1
 
 def mid(self,col,most,mode):
     most=-1
