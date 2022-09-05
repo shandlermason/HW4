@@ -1,3 +1,4 @@
+import math
 class Sym:
     def mid(self,col,most,mode):
         most=-1
