@@ -15,5 +15,5 @@ def test_sym():
         sym.add(x)
     mode=sym.mid()
     entropy=sym.div()
-    print(mode,entropy) #oo has to be implemented later
+    #print(mode,entropy) #oo has to be implemented later
     assert mode=='a' and (entropy>=1.37 and entropy<=1.38)
