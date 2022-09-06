@@ -1,6 +1,6 @@
 from code import main
 from code.main import Num
-from code.main import Sym
+from code.sym import Sym
 import unittest
 
 def test_answer():

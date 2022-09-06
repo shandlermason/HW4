@@ -50,4 +50,4 @@ class Num:
 
 
     def mid(self):
-        return self.x  # median - sort numbers seen so far, return the middle value
+        return 0  # median - sort numbers seen so far, return the middle value
