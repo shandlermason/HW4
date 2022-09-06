@@ -37,7 +37,6 @@ class Num:
 #                 self.isSorted = False
 #                 self._has[pos] = int(v)
 
-    # standard deviation
     def div(self):
         percentile_90 = 0.90 * self.nums()  # find 90th percentile
         percentile_10 = 0.10 * self.nums()  # find 10th percentile

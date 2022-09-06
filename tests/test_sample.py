@@ -3,10 +3,14 @@ from code.num import Num
 from code.sym import Sym
 
 
+def test_the():
+    return 0 #assert goes here
+
+
 def test_num():
     num = Num()
     for i in range(0, 100):
-        num.add(i)
+        num.add(i) #function not written yet
     mid, div = num.mid(), num.div()
     print(mid, div)
     assert (50 <= mid <= 52) and (30.5 < div < 32)
@@ -20,3 +24,7 @@ def test_sym():
     entropy = sym.div()
     # print(mode,entropy) #oo has to be implemented later
     assert mode == 'a' and (1.37 <= entropy <= 1.38)
+
+
+def test_bignum():
+    return 0  # assert goes here
