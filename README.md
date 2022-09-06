@@ -1,7 +1,8 @@
 # CSC510 HW Group 27
 [![Build](https://github.com/rohitgeddam/CSC510_HW1/actions/workflows/python-app.yml/badge.svg)](https://github.com/rohitgeddam/CSC510_HW1/actions/workflows/python-app.yml)
-[![code_size](https://img.shields.io/github/languages/code-size/rohitgeddam/CSC510_HW)](https://github.com/rohitgeddam/CSC510_HW) 
-[![repo_size](https://img.shields.io/github/repo-size/rohitgeddam/CSC510_HW1)](https://github.com/rohitgeddam/CSC510_HW)</br>
+[![repo_size](https://img.shields.io/github/repo-size/rohitgeddam/CSC510_HW1)](https://github.com/rohitgeddam/CSC510_HW)
+[![code_size](https://img.shields.io/github/languages/code-size/rohitgeddam/CSC510_HW)](https://github.com/rohitgeddam/CSC510_HW)</br>
+
 
 NCSU CSC-510 SWE
 
