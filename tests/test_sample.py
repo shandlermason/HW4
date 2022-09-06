@@ -51,4 +51,4 @@ def test_sym():
     mode=sym.mid()
     entropy=sym.div()
     #print(mode,entropy) #oo has to be implemented later
-    assert mode=='a' #and (entropy>=1.37 and entropy<=1.38)
+    assert mode=='a' and (entropy>=1.37 and entropy<=1.38)
