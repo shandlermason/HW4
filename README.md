@@ -1,4 +1,5 @@
 # CSC510 HW Group 27
+[![Test](https://github.com/rohitgeddam/CSC510_HW1/actions/workflows/python-app.yml/badge.svg)](https://github.com/rohitgeddam/CSC510_HW1/actions/workflows/python-app.yml)
 [![code_size](https://img.shields.io/github/languages/code-size/rohitgeddam/CSC510_HW)](https://github.com/rohitgeddam/CSC510_HW) 
 [![repo_size](https://img.shields.io/github/repo-size/rohitgeddam/CSC510_HW1)](https://github.com/rohitgeddam/CSC510_HW)</br>
 
