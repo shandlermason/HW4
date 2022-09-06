@@ -3,10 +3,6 @@ from code.main import Num
 from code.sym import Sym
 import unittest
 
-def test_answer():
-    assert main.func(3) == 5
-
-
 class TestCases(unittest.TestCase):
     def test_num(self):
         num = Num(1, "name")
@@ -20,4 +16,4 @@ class TestCases(unittest.TestCase):
         mode=sym.mid()
         entropy=sym.div()
         print(mode,entropy) #oo has to be implemented later
-        return (mode,entropy) # should be implemented with assert instead of return   
+        assert mode='a' and (entropy>=1.37 and entropy<=1.38)
