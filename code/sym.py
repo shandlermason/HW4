@@ -7,7 +7,7 @@ class Sym:
         self.name = s
         self._has = dict()
         
-    def add(v):
+    def add(self,v):
         if (v != "?"):
             self.n = self.n + 1
             if v in self._has:
