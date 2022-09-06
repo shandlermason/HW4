@@ -5,9 +5,9 @@ name: Build
 
 on:
   push:
-    branches: [ "HW1" ]
+    branches: [ "HW1","HW2" ]
   pull_request:
-    branches: [ "HW1" ]
+    branches: [ "HW1","HW2" ]
 
 permissions:
   contents: read
