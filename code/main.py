@@ -24,18 +24,18 @@ class Num:
             self.isSorted = True
         return self._has
 
-    def add(self, v, pos):
-        if v!="?":
-            self.n = self.n + 1
-            self.lo = math.min(v, self.lo)
-            self.hi = math.max(v, self.hi)
-            if len(self._has) < the.nums:
-                pos = 1 + len(self._has)
-            elif math.random() < the.nums/self.n:
-                pos = math.random(len(self._has))
-            if pos:
-                self.isSorted = False
-                self._has[pos] = int(v)
+#     def add(self, v, pos):
+#         if v!="?":
+#             self.n = self.n + 1
+#             self.lo = math.min(v, self.lo)
+#             self.hi = math.max(v, self.hi)
+#             if len(self._has) < the.nums:
+#                 pos = 1 + len(self._has)
+#             elif math.random() < the.nums/self.n:
+#                 pos = math.random(len(self._has))
+#             if pos:
+#                 self.isSorted = False
+#                 self._has[pos] = int(v)
 
     # standard deviation
     def div(self):
