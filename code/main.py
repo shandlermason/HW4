@@ -12,7 +12,7 @@ class Sym:
         self._has = []
         
     
-    def add(v):
+    def add(v, self=None):
         if (v != "?"):
             self.n = self.n + 1
             self._has[v] = 1 + (self._has[v]) #v or 0
@@ -36,11 +36,18 @@ class Num:
         """Return kept numbers sorted"""
         if not self.isSorted:
             self._has.sort()
-            self.isSorted=True
+            self.isSorted = True
         return self._has
 
+    def add(self):
+        return 0
+
+    # standard deviation
     def div(self):
-        return self.x  # standard deviation - sort numbers, find 90th, 10th percentile, return (90th-10th)/2.56
+        percentile_90 = 0.90 * self # find 90th percentile
+        percentile_10 = 0.10 * self # find 10th percentile
+        return (percentile_90-percentile_10) / 2.56 # return (90th-10th)/2.56
+
 
     def mid(self):
         return self.x  # median - sort numbers seen so far, return the middle value
