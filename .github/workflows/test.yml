@@ -5,9 +5,9 @@ name: Test
 
 on:
   push:
-    branches: [ "HW1","HW2" ]
+    branches: [ "HW2" ]
   pull_request:
-    branches: [ "HW1","HW2" ]
+    branches: [ "HW2" ]
 
 permissions:
   contents: read
@@ -36,4 +36,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        python3 -m pytest
+        pytest
