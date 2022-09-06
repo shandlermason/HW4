@@ -13,3 +13,11 @@ class TestCases(unittest.TestCase):
         mid = num.mid()
         div = num.div()
         print(mid, div)
+    def test_sym():
+        sym=Sym()
+        for x in ["a","a","a","a","b","b","c"]:
+            sym.add(x)
+        mode=sym.mid()
+        entropy=sym.div()
+        print(mode,entropy) #oo has to be implemented later
+        return (mode,entropy) # should be implemented with assert instead of return   
