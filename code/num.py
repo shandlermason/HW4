@@ -1,8 +1,8 @@
 from distutils import ccompiler
 import math
 
-def func(x):
-    return x + 1
+# def func(x):
+    # return x + 1
 
 class Num:
 
@@ -41,7 +41,15 @@ class Num:
     def div(self):
         percentile_90 = 0.90 * self.nums()  # find 90th percentile
         percentile_10 = 0.10 * self.nums()  # find 10th percentile
-        return (percentile_90 - percentile_10) / 2.56  # return (90th-10th)/2.56
+        return (percentile_90 - percentile_10) / 2.58  # return (90th-10th)/2.56
 
     def mid(self):
-        return 0  # median - sort numbers seen so far, return the middle value
+        sorted_num = self.nums()
+        len_of_list = len(sorted_num)
+        if len_of_list % 2 == 0:
+            first_median = sorted_num[len_of_list // 2]
+            second_median = sorted_num[len_of_list // 2 - 1]
+            mid = (first_median + second_median) / 2
+        else:
+            mid = sorted_num[len_of_list // 2]
+        return mid

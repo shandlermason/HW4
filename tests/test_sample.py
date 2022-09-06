@@ -1,16 +1,6 @@
 # from code import main
-from code.main import Num
-# import unittest
+from code.num import Num
 from code.sym import Sym
-
-# class TestCases(unittest.TestCase):
-#     def test_num(self):
-#         num = Num(1, "name")
-#         mid = num.mid()
-#         div = num.div()
-#         print(mid, div)
-
-import math
 
 
 def test_num():
