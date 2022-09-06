@@ -1,7 +1,7 @@
-from code import main
-from code.main import Num
+# from code import main
+# from code.main import Num
 from code.sym import Sym
-import unittest
+# import unittest
 
 # class TestCases(unittest.TestCase):
 #     def test_num(self):
