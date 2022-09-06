@@ -1,10 +1,10 @@
 import math
 
 class Sym:
-    def __init__(self, c, s):
+    def __init__(self, c=0, s=""):
         self.n = 0
-        self.at = c or True
-        self.name = s or True
+        self.at = c 
+        self.name = s
         self._has = dict()
         
     def add(v):
