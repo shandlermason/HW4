@@ -3,4 +3,3 @@ class Row:
         self.cells = t
         # self.cooked = copy(t) # copy function needs to be implemented
         self.isEvaled = False
-        
