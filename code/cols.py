@@ -31,3 +31,7 @@ class Cols:
                         self.y.update(col)  # dependent columns (have symbols)
                     else:
                         self.x.update(col)  # independent columns (no symbols)
+
+            # not sure if this is in the right spot
+            if re.findall("!$", s):
+                self.klass = col
