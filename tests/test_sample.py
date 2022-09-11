@@ -1,6 +1,7 @@
 # from code import main
 from code.num import Num
 from code.sym import Sym
+from code.data import Data
 
 
 def test_the():
@@ -10,7 +11,7 @@ def test_the():
 def test_num():
     num = Num()
     for i in range(0, 100):
-        num.add(i) #function not written yet
+        num.add(i)  # function not written yet
     mid, div = num.mid(), num.div()
     print(mid, div)
     assert (50 <= mid <= 52) and (30.5 < div < 32)
@@ -28,3 +29,14 @@ def test_sym():
 
 def test_bignum():
     return 0  # assert goes here
+
+def test_csv(n):
+    n = 0
+
+
+def test_data(d):
+    d = Data()
+
+
+def test_stats(data, mid, div):
+    data = Data()

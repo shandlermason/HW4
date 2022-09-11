@@ -6,6 +6,7 @@ import random
 # def func(x):
     # return x + 1
 the = {"nums":512}
+import re
 
 class Num:
 
@@ -17,8 +18,7 @@ class Num:
         self.lo = float('inf')
         self.hi = float('-inf')
         self.isSorted = True
-
-        # self.w
+        self.w = -1 if re.search('-$', s) else 1
 
     def nums(self):
         """Return kept numbers sorted"""

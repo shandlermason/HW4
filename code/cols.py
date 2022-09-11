@@ -1,4 +1,6 @@
 import re
+from code.num import Num
+from code.sym import Sym
 
 
 class Cols:
@@ -10,10 +12,26 @@ class Cols:
         self.y = {}
 
         for c, s in names:
-            self.all = re.findall("^[A-Z]*", s)  # checks if column header starts with capital letter
+
             skipped_columns = re.findall(":$", s)  # checks if column header ends in colon
 
-            if re.findall("[!+-]", s):
-                self.y[""].append(s)  # dependent columns (have symbols)
+            if re.findall("[A-Z]", s):  # checks if column header starts with capital letter
+                col = Num(c, s)
+                self.all.update(col)
+                if not skipped_columns:
+                    if re.findall("[!+-]", s):
+                        self.y.update(col)  # dependent columns (have symbols)
+                    else:
+                        self.x.update(col)  # independent columns (no symbols)
             else:
-                self.x[""].append(s)  # independent columns (no symbols)
+                col = Sym(c, s)
+                self.all.update(col)
+                if not skipped_columns:
+                    if re.findall("[!+-]", s):
+                        self.y.update(col)  # dependent columns (have symbols)
+                    else:
+                        self.x.update(col)  # independent columns (no symbols)
+
+            # not sure if this is in the right spot
+            if re.findall("!$", s):
+                self.klass = col
