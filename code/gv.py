@@ -21,11 +21,12 @@ def coerce(s):
         if s1=="false":
             return False  
         return s1
+    if 
     return int(s) or fun(re.search("^\s*(.-)\s*$",s)) #edit the parameter of fun
 
 the = {}
 # print(help)
-print(type(help))
+# print(type(help))
 # tuples = re.findall(r'--(.*)\s=\s(.*)', help)
 # print(tuples)
 tuples = re.findall("[-][\S][\s][-][-]([\S]+)[^\n]+= ([\S]+)",help)
