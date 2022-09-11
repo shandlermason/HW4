@@ -1,8 +1,11 @@
 from distutils import ccompiler
 import math
+# from code.gv import the
+import random
 
 # def func(x):
     # return x + 1
+the = {"nums":512}
 
 class Num:
 
@@ -24,18 +27,18 @@ class Num:
             self.isSorted = True
         return self._has
 
-#     def add(self, v, pos):
-#         if v!="?":
-#             self.n = self.n + 1
-#             self.lo = math.min(v, self.lo)
-#             self.hi = math.max(v, self.hi)
-#             if len(self._has) < the.nums:
-#                 pos = 1 + len(self._has)
-#             elif math.random() < the.nums/self.n:
-#                 pos = math.random(len(self._has))
-#             if pos:
-#                 self.isSorted = False
-#                 self._has[pos] = int(v)
+    def add(self, v, pos):
+        if v!="?":
+            self.n = self.n + 1
+            self.lo = min(v, self.lo)
+            self.hi = max(v, self.hi)
+            if len(self._has) < the["nums"]:
+                pos = len(self._has)
+            elif random.random() < the["nums"]/self.n:
+                pos = random.randint(1,len(self._has)-1)
+            if pos:
+                self.isSorted = False
+                self._has[pos] = int(v)
 
     def div(self):
         percentile_90 = 0.90 * self.nums()  # find 90th percentile
