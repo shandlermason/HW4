@@ -34,7 +34,9 @@ def per(t, p=0.5):
     return t[max(0, min(len(t)-1, p))]
 
 def push(t, x):
-    t.append(x)
+    kys = sorted(t.keys())
+    pos = len(kys)
+    t[pos] = x
     return x
 
 def csv():
@@ -74,7 +76,13 @@ if __name__ == "__main__":
     # print(u)
     # print(t == u)
     
-    t = [1,2,3,4,5,6]
+    t = {0: 1, 1: 2,2: 3, 3: 4,4: 5,5: 6}
+    
     print(per(t,-2))
+    
+    print(t)
+    
+    push(t, 20)
+    print(t)
     
     
