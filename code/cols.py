@@ -1,5 +1,5 @@
 import re
-from code.num import Num
+from code.Num import Num
 from code.sym import Sym
 
 

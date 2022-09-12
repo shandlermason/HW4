@@ -7,7 +7,7 @@ def o(t, show, u):
     def show(k, v):
         if not str(k): #find"^_"??
             v = o(v)
-            return len(t)=0 and print_str.format(k, v) or str(v)
+            return len(t)==0 and print_str.format(k, v) or str(v)
     u = dict()
     for k, v in t:
         u[1+len(u)] = show(k, v)
@@ -18,5 +18,3 @@ def o(t, show, u):
 def oo(t):
     print(o(t))
     return t
-
-
