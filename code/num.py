@@ -27,7 +27,7 @@ class Num:
             self.isSorted = True
         return self._has
 
-    def add(self, v, pos):
+    def add(self, v, pos = 0):
         if v!="?":
             self.n = self.n + 1
             self.lo = min(v, self.lo)
