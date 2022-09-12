@@ -58,8 +58,9 @@ def rouges():
 
 
 # Maths
-def rnd():
-    pass
+def rnd(x, places=2):
+    mult = 10 ** places
+    return math.floor(x * mult + 0.5) // mult
 
 
 if __name__ == "__main__":
