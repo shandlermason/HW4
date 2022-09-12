@@ -33,8 +33,9 @@ def per(t, p=0.5):
     p = p - 1
     return t[max(0, min(len(t)-1, p))]
 
-def push():
-    pass
+def push(t, x):
+    t.append(x)
+    return x
 
 def csv():
     pass
