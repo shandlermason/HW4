@@ -8,8 +8,12 @@ def cli():
 
 
 # Lists 
-def copy():
-    pass
+def copy(t):
+    u = {}
+    for k,v in t.items():
+        u[k] = v
+    return u
+        
 
 def per():
     pass
@@ -38,3 +42,16 @@ def rouges():
 # Maths
 def rnd():
     pass
+
+
+if __name__ == "__main__":
+    t = {
+        "h": 10,
+        "z": 27,
+        "abc": {"1": 10}
+    }
+    
+    print(t)
+    u = copy(t)
+    print(u)
+    print(t == u)
