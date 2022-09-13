@@ -40,6 +40,7 @@ def push(t, x):
     return x
 
 def csv():
+    """Call fun on each row. Row cells are divided in the.seperator"""
     pass
 
     

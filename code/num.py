@@ -3,8 +3,6 @@ import math
 # from code.gv import the
 import random
 
-# def func(x):
-    # return x + 1
 the = {"nums":512}
 import re
 
@@ -23,7 +21,8 @@ class Num:
     def nums(self):
         """Return kept numbers sorted"""
         if not self.isSorted:
-            self._has.sort()
+            # self._has.sort()
+            sorted(self._has.items(), key=lambda x: x[1])
             self.isSorted = True
         return self._has
 
@@ -36,7 +35,7 @@ class Num:
                 pos = len(self._has)
             elif random.random() < the["nums"]/self.n:
                 pos = random.randint(1,len(self._has)-1)
-            if pos:
+            if pos >= 0:
                 self.isSorted = False
                 self._has[pos] = int(v)
 
@@ -46,12 +45,24 @@ class Num:
         return (percentile_90 - percentile_10) / 2.58  # return (90th-10th)/2.56
 
     def mid(self):
-        sorted_num = self.nums()
+        sorted_num = list(self.nums())
         len_of_list = len(sorted_num)
-        if len_of_list % 2 == 0:
-            first_median = sorted_num[len_of_list // 2]
-            second_median = sorted_num[len_of_list // 2 - 1]
-            mid = (first_median + second_median) / 2
-        else:
-            mid = sorted_num[len_of_list // 2]
-        return mid
+
+        if len_of_list > 0:
+            if len_of_list % 2 == 0:
+                first_median = sorted_num[len_of_list // 2]
+                second_median = sorted_num[len_of_list // 2 - 1]
+                mid = (first_median + second_median) / 2
+            else:
+                mid = sorted_num[len_of_list // 2]
+            return mid
+
+
+if __name__ == "__main__":
+    num = Num()
+    print(num._has)
+    
+    for i in range(1,100):
+        num.add(i)
+        
+    print(num._has)

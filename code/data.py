@@ -1,4 +1,5 @@
 class Data:
+    """Data is holder of rows and their summaries"""
     def __init__(self, src):
         self.cols = None
         self.rows = {}

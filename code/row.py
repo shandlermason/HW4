@@ -1,5 +1,6 @@
+from code.utils import copy
 class Row:
     def __init__(self, t):
         self.cells = t
-        # self.cooked = copy(t) # copy function needs to be implemented
+        self.cooked = copy(t)
         self.isEvaled = False

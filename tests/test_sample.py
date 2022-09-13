@@ -1,6 +1,6 @@
 # from code import main
 from code.Num import Num
-from code.sym import Sym
+from code.Sym import Sym
 from code.data import Data
 
 
@@ -30,13 +30,13 @@ def test_sym():
 def test_bignum():
     return 0  # assert goes here
 
-def test_csv(n):
-    n = 0
+# def test_csv(n):
+#     n = 0
 
 
-def test_data(d):
-    d = Data()
+# def test_data(d):
+#     d = Data()
 
 
-def test_stats(data, mid, div):
-    data = Data()
+# def test_stats(data, mid, div):
+#     data = Data()
