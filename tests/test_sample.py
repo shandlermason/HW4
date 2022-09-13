@@ -2,10 +2,10 @@
 from code.Num import Num
 from code.Sym import Sym
 from code.data import Data
-
+from code.utils import oo
 
 def test_the():
-    return 0 #assert goes here
+    assert True
 
 
 def test_num():

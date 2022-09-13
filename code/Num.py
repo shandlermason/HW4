@@ -1,14 +1,8 @@
 from distutils import ccompiler
-# from code.utils import per
+from code.utils import per
 import math
 # from code.gv import the
 import random
-
-def per(t, p=0.5):
-    """Return the pth thing from the sorted list t"""
-    p = math.floor(p*len(t)+0.5)
-    p = p - 1
-    return t[max(0, min(len(t)-1, p))]
 
 the = {"nums":512}
 import re
