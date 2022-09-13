@@ -1,10 +1,11 @@
 from distutils import ccompiler
+
 from code.utils import per
 import math
 # from code.gv import the
 import random
+import code.settings as settings
 
-the = {"nums":512}
 import re
 
 class Num:
@@ -32,9 +33,9 @@ class Num:
             self.n = self.n + 1
             self.lo = min(v, self.lo)
             self.hi = max(v, self.hi)
-            if len(self._has) < the["nums"]:
+            if len(self._has) < settings.the["nums"]:
                 pos = len(self._has)
-            elif random.random() < the["nums"]/self.n:
+            elif random.random() < settings.the["nums"]/self.n:
                 pos = random.randint(1,len(self._has)-1)
             if pos >= 0:
                 self.isSorted = False

@@ -3,6 +3,7 @@ import math
 import re
 
 
+
 def coerce():
     pass
 
@@ -46,7 +47,7 @@ def csv():
 
     
 # Strings
-def o(t, show, u):
+def o(t):
     print_str = "{}"
     length = len(t)
     if type(t) != dict:

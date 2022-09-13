@@ -3,6 +3,7 @@ from code.Num import Num
 from code.Sym import Sym
 from code.data import Data
 from code.utils import oo
+import code.settings as settings
 
 def test_the():
     assert True
@@ -28,7 +29,13 @@ def test_sym():
 
 
 def test_bignum():
-    return 0  # assert goes here
+    num = Num()
+    settings.the["nums"] = 32
+    for i in range(1, 1001):
+        num.add(i)
+    # oo(num.nums())
+    
+    assert 32 == len(num._has)
 
 # def test_csv(n):
 #     n = 0
