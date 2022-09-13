@@ -14,7 +14,7 @@ class Num:
         self.n = 0
         self.at = c
         self.name = s
-        self._has = []
+        self._has = {}
         self.lo = float('inf')
         self.hi = float('-inf')
         self.isSorted = True
