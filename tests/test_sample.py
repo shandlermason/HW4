@@ -10,8 +10,8 @@ def test_the():
 
 def test_num():
     num = Num()
-    for i in range(0, 100):
-        num.add(i)  # function not written yet
+    for i in range(1, 101):
+        num.add(i)
     mid, div = num.mid(), num.div()
     print(mid, div)
     assert (50 <= mid <= 52) and (30.5 < div < 32)

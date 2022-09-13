@@ -1,7 +1,14 @@
 from distutils import ccompiler
+# from code.utils import per
 import math
 # from code.gv import the
 import random
+
+def per(t, p=0.5):
+    """Return the pth thing from the sorted list t"""
+    p = math.floor(p*len(t)+0.5)
+    p = p - 1
+    return t[max(0, min(len(t)-1, p))]
 
 the = {"nums":512}
 import re
@@ -40,12 +47,15 @@ class Num:
                 self._has[pos] = int(v)
 
     def div(self):
-        percentile_90 = 0.90 * self.nums()  # find 90th percentile
-        percentile_10 = 0.10 * self.nums()  # find 10th percentile
-        return (percentile_90 - percentile_10) / 2.58  # return (90th-10th)/2.56
+        a = list(self.nums().values())
+        # percentile_90 = 0.90 * self.nums()  # find 90th percentile
+        # percentile_10 = 0.10 * self.nums()  # find 10th percentile
+        # return (percentile_90 - percentile_10) / 2.58  # return (90th-10th)/2.56
+        return ( per(a, .9) - per(a, .1) ) / 2.58
 
     def mid(self):
-        sorted_num = list(self.nums())
+        sorted_num = list(self.nums().values())
+        
         len_of_list = len(sorted_num)
 
         if len_of_list > 0:
@@ -66,3 +76,5 @@ if __name__ == "__main__":
         num.add(i)
         
     print(num._has)
+    
+    num.div()
