@@ -1,5 +1,6 @@
 # Handle settings
 import math
+import re
 
 
 def coerce():
@@ -46,17 +47,17 @@ def csv():
 # Strings
 def o(t, show, u):
     print_str = "{}"
-    len = len(t)
+    length = len(t)
     if type(t) != dict:
         return str(t)
     def show(k, v):
-        if not str(k): #find"^_"??
+        if not re.findall("_", str(k)):
             v = o(v)
-            return len(t)==0 and print_str.format(k, v) or str(v)
+            return length==0 and print_str.format(k, v) or str(v)
     u = dict()
     for k, v in t:
         u[1+len(u)] = show(k, v)
-    if len(t) == 0:
+    if length==0:
         sorted(u)
     return ("{" + u + " }")
 
