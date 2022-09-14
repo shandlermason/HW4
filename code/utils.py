@@ -48,20 +48,19 @@ def csv():
     
 # Strings
 def o(t):
-    print_str = "{}"
-    length = len(t)
     if type(t) != dict:
         return str(t)
     def show(k, v):
-        if not re.findall("_", str(k)):
+        match_str= re.compile("^_")
+        if not re.findall(match_str, str(k)):
             v = o(v)
-            return length==0 and print_str.format(k, v) or str(v)
+            return len(t)==0 and "{}".format(k,v) or str(v)
     u = dict()
-    for k, v in t:
+    for k, v in t.items():
         u[1+len(u)] = show(k, v)
-    if length==0:
+    if len(t)==0:
         sorted(u)
-    return ("{" + u + " }")
+    return u
 
 def oo(t):
     print(o(t))
