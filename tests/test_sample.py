@@ -33,7 +33,7 @@ def test_bignum():
     settings.the["nums"] = 32
     for i in range(1, 1001):
         num.add(i)
-    # oo(num.nums())
+    oo(num.nums())
     
     assert 32 == len(num._has)
 
