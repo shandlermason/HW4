@@ -6,6 +6,7 @@ from code.utils import oo
 import code.settings as settings
 
 def test_the():
+    oo(settings.the)
     assert True
 
 
