@@ -1,9 +1,15 @@
 # from code import main
+import os
+import sys
 from code.Num import Num
 from code.Sym import Sym
-from code.data import Data
-from code.utils import oo
+# from code.data import Data
+from code.utils import oo,csv
 import code.settings as settings
+
+TEST_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
+sys.path.insert(0, PROJECT_DIR)
 
 def test_the():
     oo(settings.the)
@@ -40,10 +46,31 @@ def test_bignum():
 
 # def test_csv(n):
 #     n = 0
+#     def x(row):
+#         n += 1
+#         if n > 10:
+#             return
+#         else:
+#             oo(row)
+#     csv("../data/auto93.csv",fun)
+
+def test_csv():
+    global n
+    n = 0
+    def func_row(row):
+        global n
+        n = n + 1
+        if n > 10:
+            return n
+        else:
+            return oo(row)
+    
+    csv(f'{PROJECT_DIR}/data/auto93.csv', func_row)
 
 
 # def test_data(d):
-#     d = Data()
+#     d = Data("../data/auto93.csv")
+#     for _,col in 
 
 
 # def test_stats(data, mid, div):
