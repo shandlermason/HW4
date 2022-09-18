@@ -2,11 +2,25 @@
 import math
 import re
 
+def is_num(string):
+    try:
+        float(string)
+        return True
+    except ValueError:
+        return False
 
+def func(s1):
+    if s1 == "true":
+        return True
+    elif s1 == "false":
+        return False
+    return s1
 
-def coerce():
-    pass
-
+def coerce(s):
+    if is_num(s):
+        return float(s)
+    else:
+        return func(s) or None
 
 def cli():
     pass
@@ -41,10 +55,20 @@ def push(t, x):
     t[pos] = x
     return x
 
-def csv():
+def csv(fname, fun):
     """Call fun on each row. Row cells are divided in the.seperator"""
-    pass
-
+    sep = "," #edit this line
+    src = open(fname)
+    while True:
+        s = src.readline()
+        if not s:
+            return src.close()
+        else:
+            t={}
+            for s1 in s.split(sep):
+                t[1+len(t)] = coerce(s1)
+            fun(t) #findout fun
+            
     
 # Strings
 def o(t):
