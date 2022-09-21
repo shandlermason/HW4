@@ -8,7 +8,7 @@
 NCSU CSC-510 SWE
 
 ## HW 4
-Add all the bling from HW1. Also, add post-commit hooks to auto run all the test cases, the code coverage checks (if your language supports then), and the documentation generators.
+Added all the bling from HW1. Also, add post-commit hooks to auto run all the test cases, the code coverage checks (if your language supports then), and the documentation generators.
 
 ## Contributors:
 1. <a href="https://github.com/rohitgeddam" target="_blank">Rohit Geddam</a>
