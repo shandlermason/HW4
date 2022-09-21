@@ -7,8 +7,9 @@
 
 NCSU CSC-510 SWE
 
-## Simple program that increments the given input by 1
-This program adds 1 to the given number
+## HW 3
+Classes and methods for Data, Cols, Row
+Output from csv, data, stats teste
 
 ## Contributors:
 1. <a href="https://github.com/rohitgeddam" target="_blank">Rohit Geddam</a>
