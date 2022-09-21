@@ -9,6 +9,7 @@ NCSU CSC-510 SWE
 
 ## HW 3
 Classes and methods for Data, Cols, Row
+
 Output from csv, data, stats tests
 
 ## Contributors:
