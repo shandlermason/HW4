@@ -1,19 +1,20 @@
-# from code import main
 import os
 import sys
 from code.Num import Num
 from code.Sym import Sym
-# from code.data import Data
-from code.utils import oo,csv
-import code.settings as settings
+from code import utils
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
 sys.path.insert(0, PROJECT_DIR)
 
+
 def test_the():
-    oo(settings.the)
-    assert True
+    if utils.the:
+        print('\n', utils.the)
+        return True
+    else:
+        print('the does not exist')
 
 
 def test_num():
@@ -21,7 +22,7 @@ def test_num():
     for i in range(1, 101):
         num.add(i)
     mid, div = num.mid(), num.div()
-    print(mid, div)
+    print('\n', mid, div)
     assert (50 <= mid <= 52) and (30.5 < div < 32)
 
 
@@ -38,14 +39,14 @@ def test_sym():
 
 def test_bignum():
     num = Num()
-    settings.the["nums"] = 32
+    utils.the["nums"] = 32
     for i in range(1, 1001):
         num.add(i)
     print('\n', num.nums())
     assert 32 == len(num._has)
+    utils.the['nums'] = 512
 
-
-
+"""
 def test_csv():
     global n
     n = 0
@@ -59,7 +60,7 @@ def test_csv():
             return oo(row)
     
     csv(f'{PROJECT_DIR}/data/auto93.csv', func_row)
-
+"""
 
 def main():
     fail_count = 0
