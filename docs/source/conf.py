@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath('../../src'))
 
 # -- Project information
 
-project = 'Coastal'
+project = 'CSC510_HW1'
 copyright = '2021'
 author = 'Multiple'
 
@@ -27,7 +27,7 @@ extensions = [
 ]
 
 autoapi_type = 'python'
-autoapi_dirs = ['../../src']
+autoapi_dirs = ['../../code']
 
 #apidoc_module_dir = '../../src'
 #apidoc_output_dir = '.'
