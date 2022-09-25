@@ -28,3 +28,5 @@ jobs:
         run: echo Hello, world!
       - name: Sphinx Build
         uses: ammaraskar/sphinx-action@0.4
+        with: 
+          docs-folder: "docs/"
