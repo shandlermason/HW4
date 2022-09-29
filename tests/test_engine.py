@@ -1,7 +1,8 @@
 import os
 import sys
-from code.Num import Num
-from code.Sym import Sym
+from code.num import Num
+from code.sym import Sym
+from code.data import Data
 from code import utils
 
 TEST_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -46,21 +47,54 @@ def test_bignum():
     assert 32 == len(num._has)
     utils.the['nums'] = 512
 
-"""
+
 def test_csv():
     global n
     n = 0
     print('\n')
+
     def func_row(row):
         global n
         n = n + 1
         if n > 10:
             return n
         else:
-            return oo(row)
-    
-    csv(f'{PROJECT_DIR}/data/auto93.csv', func_row)
-"""
+            return utils.oo(row)
+
+    utils.csv1(f'{PROJECT_DIR}/data/auto93.csv', func_row)
+
+
+def test_data():
+    d = Data('https://raw.githubusercontent.com/timm/lua/main/data/auto93.csv')
+    print('\n')
+    for col in d.cols.y:
+        dd = d.cols.y[col].__dict__
+        print(':at', dd['at'], ':hi', dd['hi'], ':isSorted', dd['isSorted'], ':lo', dd['lo'], ':n', dd['n'],
+              ':name', dd['name'], ':w', dd['w'])
+    assert d.cols.y is not None
+
+
+def test_stats():
+    data = Data('https://raw.githubusercontent.com/timm/lua/main/data/auto93.csv')
+
+    def mid(col):
+        if isinstance(col, Num):  # type check, if col is an instance of 'Num'
+            return Num.mid(col)
+        else:
+            return Sym.mid(col)
+
+    def div(col):
+        if isinstance(col, Num):
+            return Num.div(col)
+        else:
+            return Sym.div(col)
+
+    print('\n')
+    print("xmid", data.stats(2, data.cols.x, mid))
+    print("xdiv", data.stats(3, data.cols.x, div))
+    print("ymid", data.stats(2, data.cols.y, mid))
+    print("ydiv", data.stats(3, data.cols.y, div))
+
 
 def main():
     fail_count = 0
@@ -68,6 +102,9 @@ def main():
     fail_count += test_num()
     fail_count += test_bignum()
     fail_count += test_sym()
+    fail_count += test_csv()
+    fail_count += test_data()
+    fail_count += test_stats()
     return fail_count  # 0 is Success
 
 
