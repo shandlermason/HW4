@@ -7,8 +7,12 @@
 
 NCSU CSC-510 SWE
 
-## HW 4
-Added all the bling from HW1. Also, add post-commit hooks to auto run all the test cases, the code coverage checks (if your language supports then), and the documentation generators.
+
+## HW 2
+1. Implemented classes and methods for Num and Sym
+
+2. Shows output from the, sym, num, bignum through test engine
+
 
 ## Contributors:
 1. <a href="https://github.com/rohitgeddam" target="_blank">Rohit Geddam</a>
