@@ -8,7 +8,7 @@ jobs:
     name: Test python API
     steps:
     - name: Run tests and collect coverage
-      run: pytest --cov .
+      run: pytest --cov app
     - name: Upload coverage reports to Codecov
       run: |
         # Replace `linux` below with the appropriate OS
