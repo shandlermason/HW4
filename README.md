@@ -3,8 +3,7 @@
 [![code_size](https://img.shields.io/github/languages/code-size/rohitgeddam/CSC510_HW)](https://github.com/rohitgeddam/CSC510_HW) 
 [![repo_size](https://img.shields.io/github/repo-size/rohitgeddam/CSC510_HW1)](https://github.com/rohitgeddam/CSC510_HW)</br>
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7061868.svg)](https://doi.org/10.5281/zenodo.7061868)
-[![codecov](https://codecov.io/github/shandlermason/HW4/branch/HW1/graph/badge.svg?token=9H8PJF7GON)](https://codecov.io/github/shandlermason/HW4)
-
+[![codecov](https://codecov.io/github/shandlermason/HW4/branch/HW4/graph/badge.svg?token=9H8PJF7GON)](https://codecov.io/github/shandlermason/HW4)
 
 NCSU CSC-510 SWE
 
