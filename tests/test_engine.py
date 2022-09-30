@@ -1,13 +1,10 @@
 import os
 import sys
-from code.num import Num
-from code.sym import Sym
-from code.data import Data
-from code import utils
+from src.num import Num
+from src.sym import Sym
+from src.data import Data
+from src import utils
 
-TEST_DIR = os.path.dirname(os.path.abspath(__file__))
-PROJECT_DIR = os.path.abspath(os.path.join(TEST_DIR, os.pardir))
-sys.path.insert(0, PROJECT_DIR)
 
 
 def test_the():
@@ -49,19 +46,11 @@ def test_bignum():
 
 
 def test_csv():
-    global n
-    n = 0
+    rows = utils.csv_function('https://raw.githubusercontent.com/timm/lua/main/data/auto93.csv')
     print('\n')
-
-    def func_row(row):
-        global n
-        n = n + 1
-        if n > 10:
-            return n
-        else:
-            return utils.oo(row)
-
-    utils.csv1(f'{PROJECT_DIR}/data/auto93.csv', func_row)
+    for line in rows[0:10]:
+        print(line)
+    assert len(rows) != 0
 
 
 def test_data():

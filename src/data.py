@@ -1,6 +1,6 @@
-from code import utils
-from code.row import Row
-from code.cols import Cols
+from src import utils
+from src.row import Row
+from src.cols import Cols
 
 class Data:
     def __init__(self, src):
